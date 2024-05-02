@@ -8,7 +8,8 @@
 			<table>
 				<tr>
 					<th colspan="3">
-						Form Input Data Mata Kuliah
+						<!-- Form Input Data Mata Kuliah -->
+						Daftar Riwayat hidup
 					</th>
 				</tr>
 
@@ -22,7 +23,7 @@
 					<th>:</th>
 					<td>
 						<input type="text" name="kode" id="kode" placeholder="Kode MTK">
-						<div class="col-sm-6 col-danger" <?= form_error('kode')?>></div>
+						<div class="col-sm-8 col-danger" <?= form_error('kode')?>></div>
 					</td>
 				</tr>
 				<tr>
@@ -30,7 +31,7 @@
 					<td>:</td>
 					<td>
 						<input type="text" name="nama" id="nama" placeholder="Nama" >
-						<div class="col-sm-6 col-danger" <?= form_error('nama')?>></div>
+						<div class="col-sm-8 col-danger" <?= form_error('nama')?>></div>
 					</td>
 				</tr>
 				<tr>
