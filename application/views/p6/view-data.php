@@ -19,12 +19,19 @@
 				<span><i class="icon icon-user"></i></span>
 			</div>
 			<div class="form-group">
-			<div><?= $nim; ?></div>
-
-			</div>
-			<div class="form-group">
 			<div><?= $nama; ?></div>
 
+			<div class="form-group mt-3">
+			<div><?= $nis; ?></div>
+			</div>
+			<div class="form-group">
+			<div><?= $kelas; ?></div>
+			</div>
+			<div class="form-group">
+			<div><?= $kelamin; ?></div>
+			</div>
+			<div class="form-group">
+			<div><?= $agama; ?></div>
 			</div>
 			<div class="form-group">
 				<div><?= $date; ?></div>

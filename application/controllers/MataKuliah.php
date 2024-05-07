@@ -38,16 +38,16 @@ class Matakuliah extends CI_Controller
         //         $this->load->view('view-data-matakuliah', $data);
         // }
         $this->load->library('form_validation');
-        $this->form_validation->set_rules('nim'         , 'nim','required|min_length[8]|numeric',[
-            'required' => 'NIM Harus diisi',
-            'min_lenght' => 'NIM minimal 8 angka',
-            'numeric' => 'Yang anda masukan bukan angka'
-        ]);
-        $this->form_validation->set_rules('nama'        , 'nama','required|min_length[3]|alpha',[
+        // $this->form_validation->set_rules('nim'         , 'nim','required|min_length[8]|numeric',[
+        //     'required' => 'NIM Harus diisi',
+        //     'min_lenght' => 'NIM minimal 8 angka',
+        //     'numeric' => 'Yang anda masukan bukan angka'
+        // ]);
+        $this->form_validation->set_rules('nama'        , 'nama','required|min_length[3]',[
             'required' => 'Nama Harus diisi dan berupa huruf',
             // 'alpha' => 'tst',
             'min_lenght' => 'Nama terlalu pendek',
-            'alpha' => 'test'
+            // 'alpha' => 'test'
         ]);
         // $this->form_validation->set_rules('reg[dob]'    , 'Date of birth', 'regex_match[(0[1-9]|1[0-9]|2[0-9]|3(0|1))-(0[1-9]|1[0-2])-\d{4}]'); 
         $this->form_validation->set_rules('tmptlhr'     , 'Tempat lahir','required|min_length[3]',  ['required' => 'Tempat lahir Harus diisi','min_lenght' => 'Tempat lahir terlalu pendek']);
@@ -56,8 +56,12 @@ class Matakuliah extends CI_Controller
         if ($this->form_validation->run() != true) { $this->load->view('p6/view-form');
         } else {
                 $data = [
-                'nim'       => $this->input->post('nim'),
+                // 'nim'       => $this->input->post('nim'),
                 'nama'      => $this->input->post('nama'),
+                'nis'       => $this->input->post('nis'),
+                'kelas'     => $this->input->post('kelas'),
+                'agama'     => $this->input->post('agama'),
+                'kelamin'   => $this->input->post('kelamin'),
                 'date'      => $this->input->post('date'),
                 'tmptlhr'   => $this->input->post('tmptlhr'),
                 'alamat'    => $this->input->post('alamat')
